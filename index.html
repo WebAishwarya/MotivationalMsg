@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title> Motivational </title>
+
+	<style>
+		* { font-size : 40px; }
+		h1 {color : white;}
+	</style>
+
+	<script>
+		function show()
+		{
+			event.preventDefault();
+			let ans = document.getElementById("ans");
+			
+			//Array of msgs
+			let mm = ["Live & Let Live","I Will Do It","Change Is Constant","Stay Beautiful","You Are Your Best Thing"];
+
+			//Selectiong any one random msg
+			let r = parseInt(Math.random() * mm.length);
+
+			//Showing the msg
+			ans.innerHTML = mm[r];
+		}
+	</script>
+</head>
+
+<body style="background-color:pink">
+
+<!--Whenever we click the a button random motivational message should appear on the screen -->
+
+	<center>
+		<h1> Motivational Msg V1 </h1>
+
+		<form onsubmit="show()">
+			<input type= "Submit" value="Get Msg" />
+		</form>
+
+		<h1 id="ans" />
+
+	</center>
+
+</body>
+
+</html>
